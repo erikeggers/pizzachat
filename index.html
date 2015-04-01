@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Chat</title>
+  <link rel="stylesheet" href="styles/normalize.css/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<h1 class="welcome"> Welcome to Pizza Chat</h1>
+
+<div class="login-container">
+  <form action="" class="loginUsername">
+    <div class="login">
+      <input class="username-input" type="text" placeholder="Enter your username">
+      <input type="submit" value="Login" id="loginButton">
+    </div>
+  </form>
+</div>
+
+
+  <div class="msg-container hidden">
+    <ul class="msg-list"></ul>
+  </div>
+
+  <script type="text/template" class="chat-items">
+
+    <li class="msg-holder">
+      <ul>
+       <li class="name"><p><%= username %></p></li>
+       <li class="msg"><p><%= message %></p></li>
+       <li class="date"><p><%= moment(createdAt, 'x').fromNow() %></p></li>
+      </ul>
+    </li>
+
+  </script>
+
+  <div class="msg-input-container hidden">
+    <div class="username-title">
+      <p>Logged in as:</p>
+      <span class="username-filler"></span>
+    </div>
+    <div class="msg-input">
+      <textarea id="msg-textbox"></textarea>
+    </div>
+    <input type="submit" value="submit" id="msgButton">
+  </div>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="bower_components/moment/moment.js"></script>
+
+
+</body>
+</html>
