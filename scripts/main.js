@@ -1,8 +1,7 @@
 (function(){
   'use strict';
 
-var pizzaUrl ="http://tiny-pizza-server.herokuapp.com/collections/greenville-chats";
-console.log("hello");
+var pizzaUrl ="https://tiny-pizza-server.herokuapp.com/collections/greenville-chats";
 
 var usernameInput = "";
 var messageInput = "";
